@@ -1,0 +1,131 @@
+.betta_taital {
+  width: 100%;
+  font-size: 40px;
+  color: #f26522;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  /* text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8); */
+}
+
+/* Tambahkan CSS ini pada gaya yang sudah ada atau gantikan gaya yang sudah ada di tag <style> atau file style.css eksternal Anda */
+
+.betta_section_2 .row {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+  /* Tambahkan margin negatif untuk mengkompensasi margin antar kolom */
+}
+
+.col-lg-4 {
+  flex: 0 0 calc(33.333% - 70px);
+  /* 20px adalah total margin antar kolom */
+  margin-bottom: 20px;
+  padding: 0 10px;
+  /* Tambahkan padding untuk membuat ruang antar kolom */
+}
+
+/* Sesuaikan gaya untuk penataan ruang yang lebih baik */
+.betta_text {
+  width: 100%;
+  font-size: 20px;
+  color: #30302e;
+  text-align: center;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+
+.price_text {
+  width: 100%;
+  font-size: 16px;
+  color: #f26522;
+  text-align: center;
+  margin: 0px;
+}
+
+.betta_img img {
+  max-width: 300px;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+
+}
+
+.box_main {
+  width: 100%;
+  background-color: #ffffff;
+  height: auto;
+  padding: 20px;
+  /* box-shadow: 0px 0 30px 10px #f0f0f0; */
+  margin-bottom: 20px;
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+  border-radius: 30px;
+}
+
+.box_main:hover {
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+}
+
+.btn_main {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.buy_bt a,
+.seemore_bt a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #f26522;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.buy_bt a::before,
+.seemore_bt a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, #fff, transparent);
+  /* Gradient garis putih */
+  transition: left 0.3s ease;
+  /* Efek transisi perpindahan garis */
+}
+
+.buy_bt a:hover::before,
+.seemore_bt a:hover::before {
+  left: 100%;
+  /* Pindahkan garis ke kanan saat tombol dihover */
+  animation: moveLine 1s linear infinite;
+  /* Animasi berjalan terus, hanya ketika tombol dihover */
+}
+
+@keyframes moveLine {
+  0% {
+    left: -100%;
+    /* Awal animasi di luar kiri */
+  }
+
+  100% {
+    left: 100%;
+    /* Akhir animasi di luar kanan */
+  }
+}
+
+
+
+.buy_bt a:hover,
+.seemore_bt a:hover {
+  background-color: #262626;
+}
+
+

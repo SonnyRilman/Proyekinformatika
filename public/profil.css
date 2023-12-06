@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800&family=Roboto:wght@100;300;400&display=swap');
+
+:root {
+    --primary-color: #f9532d;
+    --primary-dark: #1F252E;
+}
+
+* {
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: #ffffff;
+    font-family: 'Outfit', sans-serif;
+}
+
+.center {
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    position: absolute;
+}
+
+.buttons {
+    display: flex;
+    gap: 2rem;
+}
+
+.button2 {
+    text-align: center;
+    width: 60px;
+    height: 30px;
+    border-radius: .4rem;
+    color: #ffffff;
+    font-size: 18px;
+    font-family: sans-serif;
+    display: inline-block;
+    background: transparent;
+    box-shadow: inset 0 0 0 0 #a5a5a5;
+    border: 1px solid #f9532d;
+    cursor: pointer;
+    transition: .3s ease-in;
+}
+
+.button2:hover {
+    border: 1px solid transparent;
+    box-shadow: inset 300px 0 0 0 #f9532d;
+}
+
+.button3 {
+    text-align: center;
+    width: 60px;
+    height: 30px;
+    border-radius: .4rem;
+    color: #ffffff;
+    font-size: 18px;
+    font-family: sans-serif;
+    display: inline-block;
+    background: transparent;
+    box-shadow: inset 0 0 0 0 #fff;
+    border: 1px solid #f9532d;
+    cursor: pointer;
+    transition: .3s ease-in;
+}
+
+.button3:hover {
+    border: 1px solid transparent;
+    box-shadow: inset 300px 0 0 0 #f9532d;
+    color: #030321;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    flex-wrap: wrap;
+    padding: 32px
+}
+.card {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background: #ffffff;
+    border-radius: 3px;
+    margin: 0 auto;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, .2);
+    overflow: hidden;
+    z-index: 0;
+    /* Tambahkan z-index yang lebih rendah di sini */
+}
+
+header {
+    position: relative;
+    z-index: 1000;
+    /* Nilai z-index yang tinggi untuk navbar */
+    box-shadow: 0 4px 17px rgba(0, 0, 0, .1);
+    background: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.card::before,
+.card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+    background: #ffffff;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, .2);
+    z-index: -1;
+    transition: .5s;
+}
+
+.card:hover::after {
+    transform: rotate(10deg);
+}
+
+.card:hover::before {
+    transform: rotate(20deg);
+}
+
+.card .imgBox {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    background: #101010;
+    z-index: 1;
+    transition: .5s;
+}
+
+.card:hover .imgBox {
+    bottom: 75px;
+}
+
+.card .imgBox img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover
+}
+
+.card .details {
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    height: 55px;
+}
+
+.card .details h2 {
+    margin-top: 5px;
+    padding: 0;
+    font-weight: 900;
+    font-size: 20px;
+    color: #101010;
+    text-align: center;
+    line-height: 1.15em;
+}
+
+.card .details h2 span {
+    font-weight: 400;
+    font-size: 15px;
+    color: #0dac4f;
+}
